@@ -32,8 +32,6 @@ const Post = async (req, res) => {
 
     }
 
-
-
 };
 
 const Edit = async (req, res) => {
