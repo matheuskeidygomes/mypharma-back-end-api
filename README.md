@@ -34,7 +34,6 @@ foi utilizado Node.JS com Express.JS e MongoDB.
 - [x] Visualizar/Cadastrar/Editar/Deletar produtos no estoque.
 - [x] Visualizar/Cadastrar/Editar/Deletar categorias de produtos.
 - [x] Visualizar/Cadastrar/Editar/Deletar marcas de produtos.
-- [x] Filtrar listagem dos itens por nome, marcas, categorias ou descrição. 
 
 
 # Pré-requisitos
