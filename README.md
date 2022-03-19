@@ -3,6 +3,27 @@
 Esta api é utilizada para gerenciar um estoque de produtos disponíveis em uma farmácia. Para seu desenvolvimento
 foi utilizado Node.JS com Express.JS e MongoDB.
 
+![Node](https://img.shields.io/badge/Node-v16.14%20(LTS)-brightgreen)
+![Npm](https://img.shields.io/badge/Npm-v8.3.1-blue) 
+![License](https://img.shields.io/badge/License-MIT-red)
+
+-------------------------------------------------------------------------------
+
+# Status
+
+:construction: Em desenvolvimento
+
+------------------------------------------------------------------------------
+
+# Features
+
+- [x] Cadastrar novos usuários.
+- [x] Logar com usuário existente.
+- [x] Visualizar/Cadastrar/Editar/Deletar produtos no estoque.
+- [x] Visualizar/Cadastrar/Editar/Deletar categorias de produtos.
+- [x] Visualizar/Cadastrar/Editar/Deletar marcas de produtos.
+- [x] Filtrar listagem dos itens por nome, marcas, categorias ou descrição. 
+
 
 ------------------------------------------------------------------------------
 
@@ -36,14 +57,14 @@ Exemplo de resposta:
 
 ```bash
 
-    {
-        "response": {
-            "status": true,
-            "name": "usuário teste",
-            "email": "teste@gmail.com",
-            "token": "eyJhskjGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzUwOTNiMzRjYzVlOTMzNDVhYmUzNCIsImVtYWlsIjoiYW5hQGdtYWlsLmNvbSIsImlhdCI6MTY0NzY1MDYzMn0.eP2zogD6-b2bWdLyVB8weT7PiwzR0273XQh7hG8mkK0"
-        }
+{
+    "response": {
+        "status": true,
+        "name": "usuário teste",
+        "email": "teste@gmail.com",
+        "token": "eyJhskjGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzUwOTNiMzRjYzVlOTMzNDVhYmUzNCIsImVtYWlsIjoiYW5hQGdtYWlsLmNvbSIsImlhdCI6MTY0NzY1MDYzMn0.eP2zogD6-b2bWdLyVB8weT7PiwzR0273XQh7hG8mkK0"
     }
+}
 
 ```
 
@@ -79,14 +100,14 @@ Exemplo de resposta:
 
 ```bash
 
-    {
-        "response": {
-            "status": true,
-            "name": "usuário teste",
-            "email": "teste@gmail.com",
-            "token": "eyJhskjGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzUwOTNiMzRjYzVlOTMzNDVhYmUzNCIsImVtYWlsIjoiYW5hQGdtYWlsLmNvbSIsImlhdCI6MTY0NzY1MDYzMn0.eP2zogD6-b2bWdLyVB8weT7PiwzR0273XQh7hG8mkK0"
-        }
+{
+    "response": {
+        "status": true,
+        "name": "usuário teste",
+        "email": "teste@gmail.com",
+        "token": "eyJhskjGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzUwOTNiMzRjYzVlOTMzNDVhYmUzNCIsImVtYWlsIjoiYW5hQGdtYWlsLmNvbSIsImlhdCI6MTY0NzY1MDYzMn0.eP2zogD6-b2bWdLyVB8weT7PiwzR0273XQh7hG8mkK0"
     }
+}
 
 ```
 
@@ -104,7 +125,176 @@ Exemplo de resposta:
 
 ```
 
+
 -------------------------------------------------------------------------------------------
+
+
+### (Privado) POST /product
+
+Este endpoint é utilizado para realizar o processo de cadastro de produtos no banco de dados.
+
+#### PARÂMETROS
+
+Nome, descrição, preço, estoque, categoria e marca do produto.
+
+Exemplo:
+
+```bash
+
+{
+    "name": "Produto Teste",
+    "description": "Descrição do produto",
+    "price": 12,00,
+    "inventory": 20,
+    "category": "Categoria Teste",
+    "brand": "Marca teste
+}
+
+```
+
+#### RESPOSTAS
+
+##### OK! 
+
+Caso essa seja a resposta, você vai receber os dados do produto cadastrado.
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "name": "Produto Teste",
+    "description": "Descrição do produto",
+    "price": 12,
+    "inventory": 20,
+    "category": "Categoria Teste",
+    "brand": "Marca teste"
+}   
+
+```
+
+##### FALHA NA AUTENTICAÇÃO!
+
+Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "error": "Não autorizado! "
+}
+
+```
+
+
+------------------------------------------------------------------------------------------
+
+
+### (Privado) POST /category
+
+Este endpoint é utilizado para realizar o processo de cadastro de categorias no banco de dados.
+
+#### PARÂMETROS
+
+Nome e descrição da categoria.
+
+Exemplo:
+
+```bash
+
+{
+    "name": "Categoria Teste",
+    "description": "Descrição da categoria",
+}
+
+```
+
+#### RESPOSTAS
+
+##### OK! 
+
+Caso essa seja a resposta, você vai receber os dados da categoria cadastrado.
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "id": "6235328e498deef01afbad0e",
+    "name": "Categoria Teste",
+    "description": "Descrição da categoria"
+}
+
+```
+
+##### FALHA NA AUTENTICAÇÃO!
+
+Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "error": "Não autorizado! "
+}
+
+```
+
+-------------------------------------------------------------------------------------------
+
+
+### (Privado) POST /brand
+
+Este endpoint é utilizado para realizar o processo de cadastro de marcas no banco de dados.
+
+#### PARÂMETROS
+
+Nome da marca.
+
+Exemplo:
+
+```bash
+
+{
+    "name": "Marca Teste",
+}
+
+```
+
+#### RESPOSTAS
+
+##### OK! 
+
+Caso essa seja a resposta, você vai receber os dados da marca cadastrada.
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "id": "62353327498deef01afbad10",
+    "name": "Marca Teste"
+}
+
+```
+
+##### FALHA NA AUTENTICAÇÃO!
+
+Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "error": "Não autorizado! "
+}
+
+```
+
+-----------------------------------------------------------------------------------------------
 
 
 ### (Privado) GET /brands
@@ -265,6 +455,328 @@ Exemplo de resposta:
 }
 
 ```
+
+------------------------------------------------------------------------------------------------------------
+
+
+### (Privado) PUT /brand/:_id
+
+Este endpoint é utilizado para realizar o processo de edição de marcas no banco de dados.
+
+#### PARÂMETROS
+
+Nome da marca.
+
+Exemplo:
+
+```bash
+
+{
+    "name": "Marca Teste Editada",
+}
+
+```
+
+#### RESPOSTAS
+
+##### OK! 
+
+Caso essa seja a resposta, você vai receber os dados da marca editada.
+
+Exemplo de resposta:
+
+```bash
+
+{
+
+    "response": {
+        "_id": "62353327498deef01afbad10",
+        "UUID": "b65b0f9a-dcfd-4667-94ff-f9ce5fcd88a1",
+        "name": "Marca Teste Editada",
+        "__v": 0
+    }
+
+}
+
+```
+
+##### FALHA NA AUTENTICAÇÃO!
+
+Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "error": "Não autorizado! "
+}
+
+```
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+### (Privado) PUT /product/:_id
+
+Este endpoint é utilizado para realizar o processo de edição de produtos no banco de dados.
+
+#### PARÂMETROS
+
+Nome, descrição, preço, estoque, categoria e marca do produto.
+
+Exemplo:
+
+```bash
+
+{
+    "name": "Produto Editado",
+    "description": "Descrição Editada",
+    "price": 15,
+    "inventory": 20,
+    "category": "Categoria Editada",
+    "brand": "Marca Editada"
+}
+
+```
+
+#### RESPOSTAS
+
+##### OK! 
+
+Caso essa seja a resposta, você vai receber os dados do produto editado.
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "response": {
+        "_id": "623531e2498deef01afbad0c",
+        "UUID": "96d5ea3d-e8a9-4103-b857-db5489317060",
+        "name": "Produto Editado",
+        "description": "Descrição Editada",
+        "price": 15,
+        "inventory": 20,
+        "category": "Categoria Editada",
+        "brand": "Marca Editada",
+        "__v": 0
+    }
+}
+
+```
+
+##### FALHA NA AUTENTICAÇÃO!
+
+Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "error": "Não autorizado! "
+}
+
+```
+
+------------------------------------------------------------------------------------------------------------
+
+
+### (Privado) PUT /category/:_id
+
+Este endpoint é utilizado para realizar o processo de edição de categorias no banco de dados.
+
+#### PARÂMETROS
+
+Nome e descrição da categoria.
+
+Exemplo:
+
+```bash
+
+{
+    "name": "Categoria Teste Editada",
+    "description": "Descrição Teste Editada"
+}
+
+```
+
+#### RESPOSTAS
+
+##### OK! 
+
+Caso essa seja a resposta, você vai receber os dados da categoria editada.
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "response": {
+        "_id": "6235328e498deef01afbad0e",
+        "UUID": "c059184f-345c-46ee-8c7d-f52922d54cb9",
+        "name": "Categoria Teste Editada",
+        "description": "Descrição Teste Editada",
+        "__v": 0
+    }
+}
+
+```
+
+##### FALHA NA AUTENTICAÇÃO!
+
+Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "error": "Não autorizado! "
+}
+
+```
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+### (Privado) DEL /brand/:_id
+
+Este endpoint é utilizado para realizar o processo de deletar uma marca no banco de dados.
+
+#### RESPOSTAS
+
+##### OK! 
+
+Caso essa seja a resposta, você vai receber uma mensagem de operação realizada com sucesso.
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "response": "Deleted with success!"
+}
+
+```
+
+##### FALHA NA AUTENTICAÇÃO!
+
+Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "error": "Não autorizado! "
+}
+
+```
+
+------------------------------------------------------------------------------------------------------------
+
+
+### (Privado) DEL /product/:_id
+
+Este endpoint é utilizado para realizar o processo de deletar um produto no banco de dados.
+
+#### RESPOSTAS
+
+##### OK! 
+
+Caso essa seja a resposta, você vai receber uma mensagem de operação realizada com sucesso.
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "response": "Deleted with success!"
+}
+
+```
+
+##### FALHA NA AUTENTICAÇÃO!
+
+Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "error": "Não autorizado! "
+}
+
+```
+
+------------------------------------------------------------------------------------------------------------
+
+
+### (Privado) DEL /category/:_id
+
+Este endpoint é utilizado para realizar o processo de deletar uma categoria no banco de dados.
+
+#### RESPOSTAS
+
+##### OK! 
+
+Caso essa seja a resposta, você vai receber uma mensagem de operação realizada com sucesso.
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "response": "Deleted with success!"
+}
+
+```
+
+##### FALHA NA AUTENTICAÇÃO!
+
+Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
+
+Exemplo de resposta:
+
+```bash
+
+{
+    "error": "Não autorizado! "
+}
+
+```
+
+-------------------------------------------------------------------------------------------------------
+
+# Tecnologias 
+
+![ReactJS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![ReactRouter](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+-------------------------------------------------------------------------------------------------------
+
+# Autor
+
+Desenvolvido por <a href="https://github.com/matheuskeidygomes"> Matheus Keidy </a>. Entre em contato!  
+  
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-keidy-7b9886190/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:matheuskeidygomes@gmail.com)
+
+
+
+
+
+
+
+
 
 
 
