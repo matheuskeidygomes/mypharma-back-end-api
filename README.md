@@ -16,14 +16,15 @@ Nome, e-mail e senha do respectivo usuário.
 
 Exemplo:
 
-´´´
+```bash
+
 {
     "name" : "usuário teste",
     "email": "teste@gmail.com",
     "password": "senhateste"
 }
 
-´´´
+```
 
 #### RESPOSTAS
 
@@ -33,7 +34,8 @@ Caso essa seja a resposta, você vai receber o token JWT para acessar endpoints 
 
 Exemplo de resposta:
 
-´´´
+```bash
+
     {
         "response": {
             "status": true,
@@ -43,7 +45,7 @@ Exemplo de resposta:
         }
     }
 
-´´´
+```
 
 
 ----------------------------------------------------------------------------------------------
@@ -58,13 +60,14 @@ E-mail e senha do respectivo usuário cadastrado no sistema.
 
 Exemplo:
 
-´´´
+```bash
+
 {
     "email": "teste@gmail.com",
     "password": "senhateste"
 }
 
-´´´
+```
 
 #### RESPOSTAS
 
@@ -74,7 +77,8 @@ Caso essa seja a resposta, você vai receber o token JWT para acessar endpoints 
 
 Exemplo de resposta:
 
-´´´
+```bash
+
     {
         "response": {
             "status": true,
@@ -84,7 +88,7 @@ Exemplo de resposta:
         }
     }
 
-´´´
+```
 
 ##### FALHA NA AUTENTICAÇÃO!
 
@@ -92,13 +96,13 @@ Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de
 
 Exemplo de resposta:
 
-´´´
+```bash
 
 {
     "error": "E-mail and/or password incorrects! "
 }
 
-´´´
+```
 
 -------------------------------------------------------------------------------------------
 
@@ -115,7 +119,8 @@ Caso essa seja a resposta, você vai receber uma listagem das marcas cadastradas
 
 Exemplo de resposta:
 
-´´´
+```bash
+
 {
     "list": [
         {
@@ -133,7 +138,7 @@ Exemplo de resposta:
     ]
 }
 
-´´´
+```
 
 ##### FALHA NA AUTENTICAÇÃO! 
 
@@ -141,12 +146,13 @@ Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de
 
 Exemplo de resposta:
 
-´´´
+```bash
+
 {
     "error": "Não autorizado!"
 }
 
-´´´
+```
 
 -----------------------------------------------------------------------------------------------------------
 
@@ -162,7 +168,8 @@ Caso essa seja a resposta, você vai receber uma listagem das marcas cadastradas
 
 Exemplo de resposta:
 
-´´´
+```bash
+
 {
     "list": [
         {
@@ -182,7 +189,7 @@ Exemplo de resposta:
     ]
 }
 
-´´´
+```
 
 ##### FALHA NA AUTENTICAÇÃO! 
 
@@ -190,12 +197,13 @@ Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de
 
 Exemplo de resposta:
 
-´´´
+```bash
+
 {
     "error": "Não autorizado!"
 }
 
-´´´
+```
 
 ----------------------------------------------------------------------------------------
 
@@ -212,7 +220,8 @@ Caso essa seja a resposta, você vai receber uma listagem dos produtos cadastrad
 
 Exemplo de resposta:
 
-´´´
+```bash
+
 {
 
     "list": [
@@ -241,7 +250,7 @@ Exemplo de resposta:
     ]
 }
 
-´´´
+```
 
 ##### FALHA NA AUTENTICAÇÃO! 
 
@@ -249,12 +258,13 @@ Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de
 
 Exemplo de resposta:
 
-´´´
+```bash
+
 {
     "error": "Não autorizado!"
 }
 
-´´´
+```
 
 
 
