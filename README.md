@@ -9,9 +9,21 @@ foi utilizado Node.JS com Express.JS e MongoDB.
 
 -------------------------------------------------------------------------------
 
+<h2 align="center">
+ <a href="#Status">Status</a> •
+ <a href="#Features">Features</a> •
+ <a href="#Pré-requisitos">Pré-requisitos</a> • 
+ <a href="#Rodando-a-aplicação">Rodando a aplicação</a> • 
+ <a href="#Rotas">Rotas</a> • 
+ <a href="#Tecnologias">Tecnologias</a> • 
+ <a href="#Autor">Autor </a>
+</h2>
+
+--------------------------------------------------------------------------------
+
 # Status
 
-:construction: Em desenvolvimento
+:heavy_check_mark: Finalizado
 
 ------------------------------------------------------------------------------
 
@@ -25,7 +37,49 @@ foi utilizado Node.JS com Express.JS e MongoDB.
 - [x] Filtrar listagem dos itens por nome, marcas, categorias ou descrição. 
 
 
+# Pré-requisitos
+
+Será necessário ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). Também é 
+aconselhável ter um editor para trabalhar com o código, como o [VSCode](https://code.visualstudio.com/).
+Se desejar rodar o banco de dados em sua máquina local, é aconselhável instalar o [MongoDB](https://www.mongodb.com/try/download/community) e [MongoCompass](https://www.mongodb.com/try/download/compass).
+
+```bash
+
+# Versão Node utilizada nesta aplicação: v16.14 (LTS)
+
+```
+
+# Rodando a aplicação
+
+```bash
+
+# Clone este repositório
+$ git clone <https://github.com/matheuskeidygomes/mypharma-back-end-api.git>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd mypharma-back-end-api
+
+# O banco de dados desta aplicação se encontra na nuvem, caso deseje rodar com banco local,  
+# acesse o arquivo ".env" na raiz do projeto, e altere a variável de ambiente "MONGO_URL" 
+# para a sua URL de conexão com o MongoDB. 
+
+# Instale as dependências
+$ npm install
+
+# Antes de executar a aplicação, caso esteja rodando com banco local, certifique se o 
+# serviço do MongoDB se encontra ativo. 
+
+# Execute a aplicação 
+$ npm start
+
+# O servidor iniciará na porta:3333 - acesse <http://localhost:3333>
+
+```
+
 ------------------------------------------------------------------------------
+
+# Rotas
 
 ### (Público) POST /register
 
@@ -755,11 +809,10 @@ Exemplo de resposta:
 
 # Tecnologias 
 
-![ReactJS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![ReactRouter](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
 -------------------------------------------------------------------------------------------------------
 
