@@ -60,8 +60,8 @@ $ git clone <https://github.com/matheuskeidygomes/mypharma-back-end-api.git>
 $ cd mypharma-back-end-api
 
 # O banco de dados desta aplicação se encontra na nuvem, caso deseje rodar com banco local,  
-# acesse o arquivo ".env" na raiz do projeto, e altere a variável de ambiente "MONGO_URL" 
-# para a sua URL de conexão com o MongoDB. 
+# acesse o arquivo ".env" na raiz do projeto, e altere o valor da variável de ambiente "MONGO_URL" 
+# para "mongodb://localhost:27017/mypharma".
 
 # Instale as dependências
 $ npm install
