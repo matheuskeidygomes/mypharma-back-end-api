@@ -42,7 +42,7 @@ foi utilizado Node.JS com Express.JS e MongoDB.
 Será necessário ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). Também é 
 aconselhável ter um editor para trabalhar com o código, como o [VSCode](https://code.visualstudio.com/).
-Se desejar rodar o banco de dados em sua máquina local, é aconselhável instalar o [MongoDB](https://www.mongodb.com/try/download/community) e [MongoCompass](https://www.mongodb.com/try/download/compass).
+O banco de dados desta aplicação se encontra na nuvem, porém se desejar roda-lo em sua máquina local, é aconselhável instalar o [MongoDB](https://www.mongodb.com/try/download/community) e [MongoCompass](https://www.mongodb.com/try/download/compass).
 
 ```bash
 
