@@ -30,7 +30,7 @@ server.use((err, req, res, next) => {
 
    } else {
 
-      res.json({ error: 'Ocorreu um erro, tente novamente!' });
+      res.json({ error: 'Error! Please, try again.' });
    }
    
 });

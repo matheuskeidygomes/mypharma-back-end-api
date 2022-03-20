@@ -28,7 +28,7 @@ const Auth = {
         } else {
 
             res.status(403);
-            res.json({ error: 'Não autorizado!' });
+            res.json({ error: 'Unauthorized!' });
         }
 
     }

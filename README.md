@@ -235,7 +235,7 @@ Exemplo de resposta:
 ```bash
 
 {
-    "error": "Não autorizado! "
+    "error": "Unauthorized!"
 }
 
 ```
@@ -290,7 +290,7 @@ Exemplo de resposta:
 ```bash
 
 {
-    "error": "Não autorizado! "
+    "error": "Unauthorized!"
 }
 
 ```
@@ -342,7 +342,7 @@ Exemplo de resposta:
 ```bash
 
 {
-    "error": "Não autorizado! "
+    "error": "Unauthorized!"
 }
 
 ```
@@ -392,7 +392,7 @@ Exemplo de resposta:
 ```bash
 
 {
-    "error": "Não autorizado!"
+    "error": "Unauthorized!"
 }
 
 ```
@@ -443,7 +443,7 @@ Exemplo de resposta:
 ```bash
 
 {
-    "error": "Não autorizado!"
+    "error": "Unauthorized!"
 }
 
 ```
@@ -504,7 +504,7 @@ Exemplo de resposta:
 ```bash
 
 {
-    "error": "Não autorizado!"
+    "error": "Unauthorized!"
 }
 
 ```
@@ -562,7 +562,7 @@ Exemplo de resposta:
 ```bash
 
 {
-    "error": "Não autorizado! "
+    "error": "Unauthorized!"
 }
 
 ```
@@ -629,7 +629,7 @@ Exemplo de resposta:
 ```bash
 
 {
-    "error": "Não autorizado! "
+    "error": "Unauthorized!"
 }
 
 ```
@@ -687,7 +687,7 @@ Exemplo de resposta:
 ```bash
 
 {
-    "error": "Não autorizado! "
+    "error": "Unauthorized!"
 }
 
 ```
@@ -725,7 +725,7 @@ Exemplo de resposta:
 ```bash
 
 {
-    "error": "Não autorizado! "
+    "error": "Unauthorized!"
 }
 
 ```
@@ -762,7 +762,7 @@ Exemplo de resposta:
 ```bash
 
 {
-    "error": "Não autorizado! "
+    "error": "Unauthorized!"
 }
 
 ```
@@ -799,7 +799,7 @@ Exemplo de resposta:
 ```bash
 
 {
-    "error": "Não autorizado! "
+    "error": "Unauthorized!"
 }
 
 ```
