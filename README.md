@@ -14,6 +14,7 @@ foi utilizado Node.JS com Express.JS e MongoDB.
  <a href="#Features">Features</a> •
  <a href="#Pré-requisitos">Pré-requisitos</a> • 
  <a href="#Rodando-a-aplicação">Rodando a aplicação</a> • 
+ <a href="#Testes">Testes</a> • 
  <a href="#Rotas">Rotas</a> • 
  <a href="#Tecnologias">Tecnologias</a> • 
  <a href="#Autor">Autor </a>
@@ -78,13 +79,32 @@ $ npm start
 
 ------------------------------------------------------------------------------
 
+# Testes
+
+Para os testes da aplicação, foi utilizado Jest. Para rodar os testes, siga as seguintes instruções:
+
+```bash
+
+# Clone este repositório
+$ git clone <https://github.com/matheuskeidygomes/mypharma-back-end-api.git>
+
+# Acesse a pasta do projeto no terminal/cmd 
+$ cd mypharma-back-end-api
+
+# Execute o comando
+$ npm run test
+
+# Aguarde a execução dos testes
+
+```
+
 # Rotas
 
-### (Público) POST /register
+## (Público) POST /register
 
 Este endpoint é utilizado para realizar o processo de cadastro do usuário.
 
-#### PARÂMETROS
+### PARÂMETROS
 
 Nome, e-mail e senha do respectivo usuário.
 
@@ -100,9 +120,9 @@ Exemplo:
 
 ```
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK! 
+#### OK! 
 
 Caso essa seja a resposta, você vai receber o token JWT para acessar endpoints protegidos da api.
 
@@ -124,11 +144,11 @@ Exemplo de resposta:
 
 ----------------------------------------------------------------------------------------------
 
-### (Público) POST /login
+## (Público) POST /login
 
 Este endpoint é utilizado para realizar o processo de login do usuário.
 
-#### PARÂMETROS
+### PARÂMETROS
 
 E-mail e senha do respectivo usuário cadastrado no sistema.
 
@@ -143,9 +163,9 @@ Exemplo:
 
 ```
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK! 
+#### OK! 
 
 Caso essa seja a resposta, você vai receber o token JWT para acessar endpoints protegidos da api.
 
@@ -164,7 +184,7 @@ Exemplo de resposta:
 
 ```
 
-##### FALHA NA AUTENTICAÇÃO!
+#### FALHA NA AUTENTICAÇÃO!
 
 Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Senha ou e-mail incorretos.
 
@@ -182,11 +202,11 @@ Exemplo de resposta:
 -------------------------------------------------------------------------------------------
 
 
-### (Privado) POST /product
+## (Privado) POST /product
 
 Este endpoint é utilizado para realizar o processo de cadastro de produtos no banco de dados.
 
-#### PARÂMETROS
+### PARÂMETROS
 
 Nome, descrição, preço, estoque, categoria e marca do produto.
 
@@ -205,9 +225,9 @@ Exemplo:
 
 ```
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK! 
+#### OK! 
 
 Caso essa seja a resposta, você vai receber os dados do produto cadastrado.
 
@@ -226,7 +246,7 @@ Exemplo de resposta:
 
 ```
 
-##### FALHA NA AUTENTICAÇÃO!
+#### FALHA NA AUTENTICAÇÃO!
 
 Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
 
@@ -244,11 +264,11 @@ Exemplo de resposta:
 ------------------------------------------------------------------------------------------
 
 
-### (Privado) POST /category
+## (Privado) POST /category
 
 Este endpoint é utilizado para realizar o processo de cadastro de categorias no banco de dados.
 
-#### PARÂMETROS
+### PARÂMETROS
 
 Nome e descrição da categoria.
 
@@ -263,9 +283,9 @@ Exemplo:
 
 ```
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK! 
+#### OK! 
 
 Caso essa seja a resposta, você vai receber os dados da categoria cadastrado.
 
@@ -281,7 +301,7 @@ Exemplo de resposta:
 
 ```
 
-##### FALHA NA AUTENTICAÇÃO!
+#### FALHA NA AUTENTICAÇÃO!
 
 Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
 
@@ -298,11 +318,11 @@ Exemplo de resposta:
 -------------------------------------------------------------------------------------------
 
 
-### (Privado) POST /brand
+## (Privado) POST /brand
 
 Este endpoint é utilizado para realizar o processo de cadastro de marcas no banco de dados.
 
-#### PARÂMETROS
+### PARÂMETROS
 
 Nome da marca.
 
@@ -316,9 +336,9 @@ Exemplo:
 
 ```
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK! 
+#### OK! 
 
 Caso essa seja a resposta, você vai receber os dados da marca cadastrada.
 
@@ -333,7 +353,7 @@ Exemplo de resposta:
 
 ```
 
-##### FALHA NA AUTENTICAÇÃO!
+#### FALHA NA AUTENTICAÇÃO!
 
 Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
 
@@ -350,13 +370,13 @@ Exemplo de resposta:
 -----------------------------------------------------------------------------------------------
 
 
-### (Privado) GET /brands
+## (Privado) GET /brands
 
 Este endpoint é utilizado para retornar a listagem de todos as marcas cadastradas no banco de dados.
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK!
+#### OK!
 
 Caso essa seja a resposta, você vai receber uma listagem das marcas cadastradas no banco de dados.
 
@@ -383,7 +403,7 @@ Exemplo de resposta:
 
 ```
 
-##### FALHA NA AUTENTICAÇÃO! 
+#### FALHA NA AUTENTICAÇÃO! 
 
 Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente.
 
@@ -399,13 +419,13 @@ Exemplo de resposta:
 
 -----------------------------------------------------------------------------------------------------------
 
-### (Privado) GET /category
+## (Privado) GET /category
 
 Este endpoint é utilizado para retornar a listagem de todos as categorias cadastradas no banco de dados.
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK!
+#### OK!
 
 Caso essa seja a resposta, você vai receber uma listagem das marcas cadastradas no banco de dados.
 
@@ -434,7 +454,7 @@ Exemplo de resposta:
 
 ```
 
-##### FALHA NA AUTENTICAÇÃO! 
+#### FALHA NA AUTENTICAÇÃO! 
 
 Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente.
 
@@ -451,13 +471,13 @@ Exemplo de resposta:
 ----------------------------------------------------------------------------------------
 
 
-### (Privado) GET /products
+## (Privado) GET /products
 
 Este endpoint é utilizado para retornar a listagem de todos as marcas cadastradas no banco de dados.
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK!
+#### OK!
 
 Caso essa seja a resposta, você vai receber uma listagem dos produtos cadastradas no banco de dados.
 
@@ -495,7 +515,7 @@ Exemplo de resposta:
 
 ```
 
-##### FALHA NA AUTENTICAÇÃO! 
+#### FALHA NA AUTENTICAÇÃO! 
 
 Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente.
 
@@ -512,11 +532,11 @@ Exemplo de resposta:
 ------------------------------------------------------------------------------------------------------------
 
 
-### (Privado) PUT /brand/:_id
+## (Privado) PUT /brand/:_id
 
 Este endpoint é utilizado para realizar o processo de edição de marcas no banco de dados.
 
-#### PARÂMETROS
+### PARÂMETROS
 
 Nome da marca.
 
@@ -530,9 +550,9 @@ Exemplo:
 
 ```
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK! 
+#### OK! 
 
 Caso essa seja a resposta, você vai receber os dados da marca editada.
 
@@ -553,7 +573,7 @@ Exemplo de resposta:
 
 ```
 
-##### FALHA NA AUTENTICAÇÃO!
+#### FALHA NA AUTENTICAÇÃO!
 
 Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
 
@@ -571,11 +591,11 @@ Exemplo de resposta:
 ------------------------------------------------------------------------------------------------------------
 
 
-### (Privado) PUT /product/:_id
+## (Privado) PUT /product/:_id
 
 Este endpoint é utilizado para realizar o processo de edição de produtos no banco de dados.
 
-#### PARÂMETROS
+### PARÂMETROS
 
 Nome, descrição, preço, estoque, categoria e marca do produto.
 
@@ -594,9 +614,9 @@ Exemplo:
 
 ```
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK! 
+#### OK! 
 
 Caso essa seja a resposta, você vai receber os dados do produto editado.
 
@@ -620,7 +640,7 @@ Exemplo de resposta:
 
 ```
 
-##### FALHA NA AUTENTICAÇÃO!
+#### FALHA NA AUTENTICAÇÃO!
 
 Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
 
@@ -637,11 +657,11 @@ Exemplo de resposta:
 ------------------------------------------------------------------------------------------------------------
 
 
-### (Privado) PUT /category/:_id
+## (Privado) PUT /category/:_id
 
 Este endpoint é utilizado para realizar o processo de edição de categorias no banco de dados.
 
-#### PARÂMETROS
+### PARÂMETROS
 
 Nome e descrição da categoria.
 
@@ -656,9 +676,9 @@ Exemplo:
 
 ```
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK! 
+#### OK! 
 
 Caso essa seja a resposta, você vai receber os dados da categoria editada.
 
@@ -678,7 +698,7 @@ Exemplo de resposta:
 
 ```
 
-##### FALHA NA AUTENTICAÇÃO!
+#### FALHA NA AUTENTICAÇÃO!
 
 Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
 
@@ -696,13 +716,13 @@ Exemplo de resposta:
 ------------------------------------------------------------------------------------------------------------
 
 
-### (Privado) DEL /brand/:_id
+## (Privado) DEL /brand/:_id
 
 Este endpoint é utilizado para realizar o processo de deletar uma marca no banco de dados.
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK! 
+#### OK! 
 
 Caso essa seja a resposta, você vai receber uma mensagem de operação realizada com sucesso.
 
@@ -716,7 +736,7 @@ Exemplo de resposta:
 
 ```
 
-##### FALHA NA AUTENTICAÇÃO!
+#### FALHA NA AUTENTICAÇÃO!
 
 Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
 
@@ -733,13 +753,13 @@ Exemplo de resposta:
 ------------------------------------------------------------------------------------------------------------
 
 
-### (Privado) DEL /product/:_id
+## (Privado) DEL /product/:_id
 
 Este endpoint é utilizado para realizar o processo de deletar um produto no banco de dados.
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK! 
+#### OK! 
 
 Caso essa seja a resposta, você vai receber uma mensagem de operação realizada com sucesso.
 
@@ -753,7 +773,7 @@ Exemplo de resposta:
 
 ```
 
-##### FALHA NA AUTENTICAÇÃO!
+#### FALHA NA AUTENTICAÇÃO!
 
 Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
 
@@ -770,13 +790,13 @@ Exemplo de resposta:
 ------------------------------------------------------------------------------------------------------------
 
 
-### (Privado) DEL /category/:_id
+## (Privado) DEL /category/:_id
 
 Este endpoint é utilizado para realizar o processo de deletar uma categoria no banco de dados.
 
-#### RESPOSTAS
+### RESPOSTAS
 
-##### OK! 
+#### OK! 
 
 Caso essa seja a resposta, você vai receber uma mensagem de operação realizada com sucesso.
 
@@ -790,7 +810,7 @@ Exemplo de resposta:
 
 ```
 
-##### FALHA NA AUTENTICAÇÃO!
+#### FALHA NA AUTENTICAÇÃO!
 
 Caso essa seja a resposta, significa que ocorreu uma falha durante o processo de autenticação da requisição. Motivos: Token inválido, expirado ou inexistente
 
@@ -812,6 +832,7 @@ Exemplo de resposta:
 ![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 
 -------------------------------------------------------------------------------------------------------
 
