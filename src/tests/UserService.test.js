@@ -17,7 +17,7 @@ describe("User Tests", () => {
     });
 
     afterAll(async () => {
-      await mongoClient.disconnect();
+      await mongoClient.connection.close();
     });
   
 
