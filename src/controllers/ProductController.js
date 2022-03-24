@@ -24,7 +24,7 @@ const Post = async (req, res) => {
 
         let newProduct = await ProductService.Post(name, description, price, inventory, category, brand);
 
-        res.json({ id: newProduct._id_, name, description, price, inventory, category, brand })
+        res.json({ id: newProduct.id, name, description, price, inventory, category, brand })
 
     } else {
 

@@ -1,6 +1,6 @@
 const pkg = require('mongoose');
 const { connect } = pkg;
-const BrandService = require('../services/BrandService.js');
+const BrandService = require('../../services/BrandService.js');
 const dotenv = require('dotenv');
 
 dotenv.config();

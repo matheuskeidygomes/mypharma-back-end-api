@@ -1,6 +1,6 @@
 const pkg = require('mongoose');
 const { connect } = pkg;
-const {Register, Login} = require('../services/UserService.js');
+const {Register, Login} = require('../../services/UserService.js');
 const dotenv = require('dotenv');
 
 dotenv.config();

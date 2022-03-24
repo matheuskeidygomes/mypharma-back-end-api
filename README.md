@@ -236,6 +236,7 @@ Exemplo de resposta:
 ```bash
 
 {
+    "id": "6235328e498deef01afbad0e",
     "name": "Produto Teste",
     "description": "Descrição do produto",
     "price": 12,
