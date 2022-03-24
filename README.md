@@ -91,6 +91,9 @@ $ git clone <https://github.com/matheuskeidygomes/mypharma-back-end-api.git>
 # Acesse a pasta do projeto no terminal/cmd 
 $ cd mypharma-back-end-api
 
+# Instale as dependências
+$ npm install
+
 # Execute o comando
 $ npm run test
 
